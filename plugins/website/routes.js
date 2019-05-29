@@ -3,11 +3,11 @@
 module.exports = (server) => {
     return [
         {
-            path: '/{param*}',
+            path: '/{path*}',
             method: 'GET',
             handler: {
                 directory: {
-                    path: require('path').join(__dirname + '\\html\\'),
+                    path: require('path').join(__dirname + '/html/'),
                     redirectToSlash: true,
                     index: true
                 }
