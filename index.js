@@ -5,7 +5,7 @@ const Hapi = require('@hapi/hapi');
 const init = async () => {
 
     const server = Hapi.server({
-        port: 80,
+        port: process.env.PORT || 8080,
         host: '0.0.0.0'
     });
 
