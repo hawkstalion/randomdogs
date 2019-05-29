@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creative Inc.</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            var dogElement = document.getElementById("dog-list");
+            var r = new XMLHttpRequest();
+            r.open("GET", "/dogs/list", true);
+            r.onreadystatechange = function () {
+                if (r.readyState != 4 || r.status != 200) return;
+                console.log(r.responseText);
+                var result = JSON.parse(r.responseText);
+                var dogs = Object.keys(result);
+                var dogList = "<ul>";
+                for (const dog of dogs) {
+                    dogList += `<li><a href="dog.html?dog=${dog}" class="dog-url">${dog}</a></li>`;
+                }
+                dogList += "</ul>";
+                dogElement.innerHTML = dogList;
+            };
+            r.send();
+        }
+        function onClick() {
+            alert('clicked')
+        }
+    </script>
+    <header>
+        <img src="img/dog.png" alt="Dogs" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dog.html">Random</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home-dog">
+        <div class="container">
+            <h1 class="title">Pick a dog breed!</h1>
+            <div id="dog-list">
+                <p>loading...</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creative Inc.</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <script>
+        window.onload = function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const dogBreed = urlParams.get('dog');
+            const url = `/dogs${dogBreed ? '/' + dogBreed : ''}`;
+            var dogElement = document.getElementById("dog-image");
+            console.log(url);
+            axios.get(url)
+                .then(function (r) {
+                    // handle success
+                    console.log(r);
+                    if (r.status != 200) return;
+                    console.log(r.data);
+                    let image = `<img src='${r.data}' alt='${dogBreed || 'random dog'}' class="dog-image" onload="addLink();">`;
+                    dogElement.innerHTML = image;
+                    console.log(image);
+                })
+                .catch(function (error) {
+                    // handle error
+                    console.log(error);
+                })
+        };
+        function addLink() {
+            var dogElement = document.getElementById("another");
+            if(!dogElement.innerText.includes('Another!')){
+                dogElement.innerHTML += '<a class="another-button" value="Another!" onClick="window.location.reload();">Another!</a>';
+            }
+            console.log('addLink()');
+        }
+    </script>
+    <header>
+        <img src="img/dog.png" alt="Dogs" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dog.html">Random</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home-dog">
+        <div class="container">
+            <h1 class="title">Here is your dog</h1>
+            <div id="dog-image">
+                <p>loading...</p>
+            </div>
+            <span id="another"></span>
+        </div>
+    </section>
+</body>
+
+</html>
