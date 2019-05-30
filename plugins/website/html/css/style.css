@@ -8,6 +8,12 @@ body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+    background-color: #45474f;
+    background-image: url('../img/dog-background.jpg');
+    background-size: 100%;
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .title {
@@ -20,8 +26,8 @@ body {
 }
 
 header {
-    margin: 3em;
-    background: #e7e7e7;
+    margin: 2em;
+    background: rgb(231,231,231, 0.7);
     background-size: cover;
     background-position: center;
     border-style: groove;
@@ -60,8 +66,8 @@ nav a:focus {
 }
 
 .home-dog {
-    background: #eeeeee;
-    margin: 3em;
+    background: rgb(231,231,231,0.8);
+    margin: 2em;
     padding: 1em;
 }
 

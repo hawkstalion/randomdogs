@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Creative Inc.</title>
+    <title>Random Doggos</title>
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="icon" href="img/doggo.ico">
 </head>
 
 <body>
@@ -34,20 +35,22 @@
         };
         function addLink() {
             var dogElement = document.getElementById("another");
-            if(!dogElement.innerText.includes('Another!')){
+            if (!dogElement.innerText.includes('Another!')) {
                 dogElement.innerHTML += '<a class="another-button" value="Another!" onClick="window.location.reload();">Another!</a>';
             }
             console.log('addLink()');
         }
     </script>
     <header>
-        <img src="img/dog.png" alt="Dogs" class="logo">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="dog.html">Random</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <img src="img/dog.png" alt="Dogs" class="logo">
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dog.html">Random</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <section class="home-dog">
