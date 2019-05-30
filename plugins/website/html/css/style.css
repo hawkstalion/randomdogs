@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700,900');
-
 * {
     box-sizing: border-box;
 }
@@ -10,10 +9,11 @@ body {
     text-align: center;
     background-color: #45474f;
     background-image: url('../img/dog-background.jpg');
-    background-size: 100%;
     background-blend-mode: overlay;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .title {
@@ -27,7 +27,7 @@ body {
 
 header {
     margin: 2em;
-    background: rgb(231,231,231, 0.5);
+    background: rgb(231, 231, 231, 0.5);
     background-size: cover;
     background-position: center;
     border-style: groove;
@@ -66,7 +66,7 @@ a:focus {
 }
 
 .home-dog {
-    background: rgb(231,231,231,0.7);
+    background: rgb(231, 231, 231, 0.7);
     margin: 2em;
     padding: 1em;
 }
@@ -89,7 +89,7 @@ a:focus {
 }
 
 .dog-list {
-    align-content: center;  
+    align-content: center;
 }
 
 h1 {
