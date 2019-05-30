@@ -27,15 +27,15 @@ body {
 
 header {
     margin: 2em;
-    background: rgb(231,231,231, 0.7);
+    background: rgb(231,231,231, 0.5);
     background-size: cover;
     background-position: center;
     border-style: groove;
 }
 
 header img {
-    height: 10%;
-    width: 10%;
+    height: 8%;
+    width: 8%;
     margin: 0;
     padding: 0;
 }
@@ -51,7 +51,7 @@ nav li {
     margin: 1em;
 }
 
-nav a {
+a {
     font-weight: 900;
     text-decoration: none;
     text-transform: uppercase;
@@ -60,13 +60,13 @@ nav a {
     color: #000000;
 }
 
-nav a:hover,
-nav a:focus {
-    color: #2b2a2a
+a:hover,
+a:focus {
+    color: #525151
 }
 
 .home-dog {
-    background: rgb(231,231,231,0.8);
+    background: rgb(231,231,231,0.7);
     margin: 2em;
     padding: 1em;
 }
@@ -80,20 +80,6 @@ nav a:focus {
 .home-dog li {
     display: inline-block;
     margin: 1em;
-}   
-
-.home-dog a {
-    font-weight: 900;
-    text-decoration: underline;
-    text-transform: uppercase;
-    font-size: .8rem;
-    pad: .5em;
-    color: #000000;
-}
-
-.home-dog a:hover,
-.home-dog a:focus {
-    color: #0000ff
 }
 
 .another-button {
@@ -114,6 +100,6 @@ h1 {
 .dog-image {
     max-width: 100%;
     height: auto;
-    margin: 0 0 3em 0;
+    margin: 1em 0 1em 0;
     text-align: center
 }
