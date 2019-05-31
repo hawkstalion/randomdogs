@@ -32,7 +32,7 @@ body {
 
 header {
     margin: 2em;
-    background: rgb(231, 231, 231, 0.5);
+    background: rgba(231, 231, 231, 0.7);
     background-size: cover;
     background-position: center;
 }
@@ -69,7 +69,7 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     font-size: .8rem;
-    pad: .5em;
+    padding: .5em;
     color: #000000;
 }
 
@@ -79,7 +79,7 @@ a:focus {
 }
 
 .home-dog {
-    background: rgb(231, 231, 231, 0.7);
+    background: rgba(231, 231, 231, 0.8);
     margin: 2em;
     padding: 1em;
 }
