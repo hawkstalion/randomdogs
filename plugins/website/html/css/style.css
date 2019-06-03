@@ -31,7 +31,7 @@ body {
 }
 
 header {
-    margin: 2em;
+    margin: 1em 2em 1em 2em;
     background: rgba(231, 231, 231, 0.7);
     background-size: cover;
     background-position: center;
@@ -80,7 +80,7 @@ a:focus {
 
 .home-dog {
     background: rgba(231, 231, 231, 0.8);
-    margin: 2em;
+    margin: 1em 2em 0em 2em;
     padding: 1em;
 }
 
@@ -119,6 +119,6 @@ h1 {
 
 @media (min-width: 1050px){
     .dog-url {
-        font-size: 1.3vw;
+        font-size: 0.8vw;
     }
 }
