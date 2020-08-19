@@ -4,13 +4,14 @@
   "description": "test app",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "pm2 start index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dave",
   "license": "ISC",
   "dependencies": {
     "@hapi/hapi": "^18.3.1",
-    "@hapi/inert": "^5.2.0"
+    "@hapi/inert": "^5.2.0",
+    "pm2": "^4.4.1"
   }
 }
